@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://jetstrap.com/alpha/frame -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link rel="stylesheet" href="http://jetstrap-site.s3.amazonaws.com/lib/etch/styles/etch.css">
+
+    <link href="http://jetstrap-site.s3.amazonaws.com/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="http://jetstrap-site.s3.amazonaws.com/lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://jetstrap-site.s3.amazonaws.com/css/frame.css">
+
+    <style id="custom-css">
+    </style>
+  <script>
+    parent.FrameWindow = window;
+    parent.FrameDocument = document;
+  </script><script src="jquery.js"></script><script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.js"><\/script>')</script><script src="underscore-min.js"></script><script src="backbone-min.js"></script><script src="etch.js"></script><script src="bootstrap.js"></script><script>
+   etch.config.buttonClasses = {
+      'all': ['bold', 'italic', 'underline', 'unordered-list', 'ordered-list', 'link']
+   };
+
+  /*
+  $(document).on('focusout', '[contenteditable="true"]', function(event) {
+    if(parent.Jetstrap && parent.Jetstrap.builder) {
+      parent.Jetstrap.builder.editableFocusLost(this);
+    }
+  });
+  */
+
+  $(document).bind('etch.closed', function(event, editable, editor) { 
+    if(parent.Jetstrap && parent.Jetstrap.builder) {
+      parent.Jetstrap.builder.editableFocusLost(editable);
+    }
+  });
+
+  $(document).ready(function() {
+    $('body').bind('mousedown', function(e) {
+      if(e.target == $('body').get(0)) {
+        console.log('Down in body');
+        if(parent.Jetstrap && parent.Jetstrap.builder) {
+          parent.Jetstrap.builder.editableFocusLost();
+        }
+      }
+    });
+  });
+      
+  </script></head>
+  
+  
+  
+  
+  
+  
+  
+  
+  <body class="design ds-component" data-componentid="page1"><div class="navbar navbar-fixed-top ds-component" data-componentid="navbar1">
+      <div class="navbar-inner">
+        <div class="container">
+        <a class="brand ds-component" href="http://jetstrap.com/alpha/frame#" contenteditable="true" data-componentid="navbarbrand1">Brand</a><ul class="nav ds-component" data-componentid="navbarlinks1">
+    <li contenteditable="true" class="ds-component" data-componentid="navbarlinkitem4"><a href="http://jetstrap.com/alpha/frame#" contenteditable="true" class="ds-component" data-componentid="link12">Link 1</a></li><li contenteditable="true" class="ds-component" data-componentid="navbarlinkitem5"><a href="http://jetstrap.com/alpha/frame#" contenteditable="true" class="ds-component" data-componentid="link11">Link 2</a></li><li contenteditable="true" class="ds-component" data-componentid="navbarlinkitem6"><a href="http://jetstrap.com/alpha/frame#" contenteditable="true" class="ds-component" data-componentid="link10">Link 3</a></li></ul></div>
+      </div>
+    </div><div class="container ds-component" data-componentid="container1">
+    <div class="hero-unit ds-component" data-componentid="hero1">
+   <div contenteditable="true" class="ds-component" data-componentid="content1">
+      <h1 contenteditable="true">Hello, World!</h1><p contenteditable="true">I'm a super hero!</p>
+    </div></div></div></body></html>
